@@ -1,0 +1,25 @@
+{{#>RootLayout}}
+  <main class="PageLayout">
+    <header>
+      <h1>{{title}}</h1>
+      <div role="group">
+        {{>actions}}
+      </div>
+    </header>
+    {{#if flash}}
+      <div role="alert">
+        {{{flash.message}}}
+        {{#if flash.errors}}
+          <ul>
+            {{#each flash.errors}}
+              <li>
+                <a id="{{@key}}-error" href="#{{@key}}">{{this}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+    {{/if}}
+    {{>@partial-block}}
+  </main>
+{{/RootLayout}}

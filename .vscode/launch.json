@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Debug",
+      "port": 9229,
+      "remoteRoot": "/www",
+      "request": "attach",
+      "sourceMaps": true,
+      "type": "node"
+    }
+  ]
+}

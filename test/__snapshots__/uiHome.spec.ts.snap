@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display home 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express.js demo</title>
+    <meta name="description" content="An Express.js demo.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/">
+    <meta property="og:title" content="Express.js demo">
+    <meta property="og:description" content="An Express.js demo.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="HomeLayout">
+        <div>
+            <h1>Express.js demo</h1>
+            <p>An <a href="https://expressjs.com">Express.js</a> demo.</p>
+        </div>
+      </main>
+  
+</body></html>"
+`;

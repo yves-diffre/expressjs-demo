@@ -1,0 +1,37 @@
+{{#>PageLayout}}
+  {{#*inline "actions"}}
+  {{/inline}}
+  <form method="post">
+    <fieldset>
+      <label for="email">{{form.fields.email.label}}</label>
+      <input
+        autocomplete="username"
+        id="email"
+        name="email"
+        placeholder="{{form.fields.email.placeholder}}"
+        required
+        type="email"
+        value="{{dto.email}}"
+        {{#if errors.email}}
+          aria-describedby="email-error"
+        {{/if}}
+      />
+      <label for="password">{{form.fields.password.label}}</label>
+      <input
+        autocomplete="new-password"
+        id="password"
+        maxlength="100"
+        name="password"
+        placeholder="{{form.fields.password.placeholder}}"
+        required
+        type="password"
+        {{#if errors.password}}
+          aria-describedby="password-error"
+        {{/if}}
+      />
+    </fieldset>
+    <div role="group">
+      <button type="submit">{{form.actions.signUp}}</button>
+    </div>
+  </form>
+{{/PageLayout}}

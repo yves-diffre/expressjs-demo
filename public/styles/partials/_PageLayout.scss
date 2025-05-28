@@ -1,0 +1,115 @@
+@forward "pico";
+
+.PageLayout {
+  > div[role="alert"] {
+    background: var(--pico-card-background-color);
+    border-radius: var(--pico-border-radius);
+    box-shadow: var(--pico-card-box-shadow);
+    margin-bottom: var(--pico-block-spacing-vertical);
+    padding: var(--pico-block-spacing-vertical)
+      var(--pico-block-spacing-horizontal);
+  }
+
+  > form {
+    > div[role="group"] {
+      column-gap: var(--pico-grid-column-gap);
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      row-gap: var(--pico-grid-row-gap);
+      width: fit-content;
+
+      > a,
+      > button {
+        border-radius: inherit;
+        height: fit-content;
+      }
+
+      > a {
+        @extend .secondary;
+      }
+    }
+
+    > fieldset {
+      > img {
+        height: 20rem;
+        margin-bottom: var(--pico-typography-spacing-vertical);
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+
+  > header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--pico-typography-spacing-vertical);
+
+    > div[role="group"] {
+      column-gap: var(--pico-grid-column-gap);
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: auto;
+      row-gap: var(--pico-grid-row-gap);
+      width: fit-content;
+
+      > a,
+      > button {
+        border-radius: inherit;
+        height: fit-content;
+      }
+
+      > form {
+        > button {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  > img {
+    height: 20rem;
+    margin-bottom: var(--pico-typography-spacing-vertical);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  > nav {
+    @extend .grid;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > article {
+      > div[role="group"] {
+        column-gap: var(--pico-grid-column-gap);
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        row-gap: var(--pico-grid-row-gap);
+
+        > a,
+        > button {
+          border-radius: inherit;
+          height: fit-content;
+        }
+
+        > form {
+          > button {
+            margin-bottom: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      > img {
+        height: 10rem;
+        margin-bottom: var(--pico-typography-spacing-vertical);
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,1107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display sign in 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should display sign up 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="Sign up here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-up">
+    <meta property="og:title" content="Sign up">
+    <meta property="og:description" content="Sign up here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-up">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up" aria-current="page">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign up</h1>
+          <div role="group">
+          </div>
+        </header>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="">
+              <label for="password">Password</label>
+              <input autocomplete="new-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign in when an unexpected error occurred 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Sorry, an unexpected error occurred. Please try again later.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="email@example.org">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign in when data are missing 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and sign in again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="password-error" href="#password">Please provide a password with 100 characters maximum.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password" aria-describedby="password-error">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign in when password is wrong 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct your email or your password.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="email@example.org">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign in when user is not found 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct your email or your password.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="unknown@example.org">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign in when validation failed 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <meta name="description" content="Sign in here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-in">
+    <meta property="og:title" content="Sign in">
+    <meta property="og:description" content="Sign in here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-in">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in" aria-current="page">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign in</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and sign in again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="password-error" href="#password">Please provide a password with 100 characters maximum.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="password">Password</label>
+              <input autocomplete="current-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password" aria-describedby="password-error">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign in</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign out when an unexpected error occurred 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express.js demo</title>
+    <meta name="description" content="An Express.js demo.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/">
+    <meta property="og:title" content="Express.js demo">
+    <meta property="og:description" content="An Express.js demo.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="HomeLayout">
+        <div>
+            <h1>Express.js demo</h1>
+            <p>An <a href="https://expressjs.com">Express.js</a> demo.</p>
+        </div>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign up when an unexpected error occurred 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="Sign up here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-up">
+    <meta property="og:title" content="Sign up">
+    <meta property="og:description" content="Sign up here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-up">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up" aria-current="page">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign up</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Sorry, an unexpected error occurred. Please try again later.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="email@example.org">
+              <label for="password">Password</label>
+              <input autocomplete="new-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign up when data are missing 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="Sign up here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-up">
+    <meta property="og:title" content="Sign up">
+    <meta property="og:description" content="Sign up here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-up">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up" aria-current="page">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign up</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and sign up again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="password-error" href="#password">Please provide a password with 100 characters maximum.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="password">Password</label>
+              <input autocomplete="new-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password" aria-describedby="password-error">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign up when user already exists 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="Sign up here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-up">
+    <meta property="og:title" content="Sign up">
+    <meta property="og:description" content="Sign up here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-up">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up" aria-current="page">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign up</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            You are already signed up.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="email@example.org">
+              <label for="password">Password</label>
+              <input autocomplete="new-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not sign up when validation failed 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="Sign up here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/auth/sign-up">
+    <meta property="og:title" content="Sign up">
+    <meta property="og:description" content="Sign up here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/auth/sign-up">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up" aria-current="page">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Sign up</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and sign up again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="password-error" href="#password">Please provide a password with 100 characters maximum.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input autocomplete="username" id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="password">Password</label>
+              <input autocomplete="new-password" id="password" maxlength="100" name="password" placeholder="Your password" required="" type="password" aria-describedby="password-error">
+            </fieldset>
+            <div role="group">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should sign in 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express.js demo</title>
+    <meta name="description" content="An Express.js demo.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/">
+    <meta property="og:title" content="Express.js demo">
+    <meta property="og:description" content="An Express.js demo.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <form action="/auth/sign-out" method="post">
+                <button type="submit">Sign out</button>
+              </form>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="HomeLayout">
+        <div>
+            <h1>Express.js demo</h1>
+            <p>An <a href="https://expressjs.com">Express.js</a> demo.</p>
+        </div>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should sign out 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express.js demo</title>
+    <meta name="description" content="An Express.js demo.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/">
+    <meta property="og:title" content="Express.js demo">
+    <meta property="og:description" content="An Express.js demo.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="HomeLayout">
+        <div>
+            <h1>Express.js demo</h1>
+            <p>An <a href="https://expressjs.com">Express.js</a> demo.</p>
+        </div>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should sign up 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express.js demo</title>
+    <meta name="description" content="An Express.js demo.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/">
+    <meta property="og:title" content="Express.js demo">
+    <meta property="og:description" content="An Express.js demo.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+            <li>
+              <form action="/auth/sign-out" method="post">
+                <button type="submit">Sign out</button>
+              </form>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="HomeLayout">
+        <div>
+            <h1>Express.js demo</h1>
+            <p>An <a href="https://expressjs.com">Express.js</a> demo.</p>
+        </div>
+      </main>
+  
+</body></html>"
+`;

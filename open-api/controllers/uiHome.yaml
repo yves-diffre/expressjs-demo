@@ -1,0 +1,10 @@
+displayHome:
+  operationId: uiHome.displayHome
+  summary: Displays home
+  tags:
+    - ui
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml

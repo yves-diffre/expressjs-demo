@@ -1,0 +1,14 @@
+{
+  "name": "Express.js demo",
+  "short_name": "expressjs-demo",
+  "background_color": "#13171f",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "icon.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "theme_color": "#13171f"
+}

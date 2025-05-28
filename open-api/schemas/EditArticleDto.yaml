@@ -1,0 +1,15 @@
+type: object
+additionalProperties: false
+properties:
+  description:
+    $ref: ./Article.yaml#/properties/description
+  image:
+    contentMediaType: image/jpeg
+  name:
+    $ref: ./Article.yaml#/properties/name
+  text:
+    $ref: ./Article.yaml#/properties/text
+required:
+  - description
+  - name
+  - text

@@ -1,0 +1,15 @@
+config:
+  phases:
+    - name: Warm up
+      arrivalRate: 1
+      duration: 60
+      rampTo: 5
+    - name: Ramp up
+      arrivalRate: 5
+      duration: 60
+      rampTo: 10
+    - name: Spike
+      arrivalRate: 10
+      duration: 60
+      rampTo: 30
+  target: https://www.expressjs-demo.localhost

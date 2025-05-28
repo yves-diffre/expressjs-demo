@@ -1,0 +1,16 @@
+description: Conflict
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          const: Conflict
+        status:
+          const: fail
+        statusCode:
+          const: 409
+      required:
+        - message
+        - status
+        - statusCode

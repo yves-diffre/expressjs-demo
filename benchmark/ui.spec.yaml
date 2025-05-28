@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/ui.processor.mjs
+scenarios:
+  - name: ui
+    engine: playwright
+    flowFunction: uiFlow

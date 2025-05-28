@@ -1,0 +1,2 @@
+user ${REDIS_ROOT_USER} >${REDIS_ROOT_PASSWORD} on ~* &* +@all
+user ${REDIS_APP_USER} >${REDIS_APP_PASSWORD} on ~* &* +@all -@dangerous

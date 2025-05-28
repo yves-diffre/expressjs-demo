@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not sign in when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not sign in when data are missing 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "password": "Please provide a password with 100 characters maximum.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not sign in when password is wrong 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not sign in when user is not found 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not sign in when validation failed 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "password": "Please provide a password with 100 characters maximum.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not sign out when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not sign up when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not sign up when data are missing 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "password": "Please provide a password with 100 characters maximum.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not sign up when user already exists 1`] = `
+{
+  "message": "Conflict",
+  "status": "fail",
+  "statusCode": 409,
+}
+`;
+
+exports[`should not sign up when validation failed 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "password": "Please provide a password with 100 characters maximum.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should sign in 1`] = `{}`;
+
+exports[`should sign out 1`] = `{}`;
+
+exports[`should sign up 1`] = `{}`;

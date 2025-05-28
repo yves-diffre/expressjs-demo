@@ -1,0 +1,18 @@
+config:
+  plugins:
+    apdex: {}
+    ensure: {}
+    metrics-by-endpoint: {}
+  apdex:
+    threshold: 100
+  ensure:
+    thresholds:
+      - http.response_time.p99: 100
+      - http.response_time.p95: 75
+  processor: ./benchmark/apiContact.processor.mjs
+scenarios:
+  - name: apiContact
+    flow:
+      - post:
+          url: /api/contact
+          beforeRequest: sendContactRequest

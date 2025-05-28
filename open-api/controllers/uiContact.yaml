@@ -1,0 +1,25 @@
+displayContact:
+  operationId: uiContact.displayContact
+  summary: Displays contact
+  tags:
+    - ui
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+sendContactRequest:
+  operationId: uiContact.sendContactRequest
+  summary: Sends a contact request
+  tags:
+    - ui
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/SendContactRequestDto.yaml
+  responses:
+    303:
+      $ref: ../responses/303.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml

@@ -1,0 +1,11 @@
+apis:
+  expressjs-demo:
+    root: ./open-api/index.yaml
+extends:
+  - recommended
+rules:
+  info-license: off
+  no-server-example.com: off
+  operation-2xx-response: off
+  operation-4xx-response: off
+  struct: off

@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/uiMongoArticles.processor.mjs
+scenarios:
+  - name: uiMongoArticles
+    engine: playwright
+    flowFunction: uiMongoArticlesFlow

@@ -1,0 +1,17 @@
+sendContactRequest:
+  operationId: apiContact.sendContactRequest
+  summary: Sends a contact request
+  tags:
+    - api
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/SendContactRequestDto.yaml
+  responses:
+    204:
+      $ref: ../responses/204.json.yaml
+    400:
+      $ref: ../responses/400.json.yaml
+    500:
+      $ref: ../responses/500.json.yaml

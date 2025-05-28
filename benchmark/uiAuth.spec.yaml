@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/uiAuth.processor.mjs
+scenarios:
+  - name: uiAuth
+    engine: playwright
+    flowFunction: uiAuthFlow

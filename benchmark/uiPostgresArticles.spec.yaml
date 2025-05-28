@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/uiPostgresArticles.processor.mjs
+scenarios:
+  - name: uiPostgresArticles
+    engine: playwright
+    flowFunction: uiPostgresArticlesFlow

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not send a contact request when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not send a contact request when data are missing 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "subject": "Please provide a subject with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not send a contact request when validation failed 1`] = `
+{
+  "errors": {
+    "email": "Please provide a valid email.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "subject": "Please provide a subject with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should send a contact request 1`] = `{}`;
+
+exports[`should send a contact request 2`] = `
+[
+  {
+    "from": "name <email@example.org>",
+    "subject": "Contact request - subject",
+    "text": "text",
+    "to": "mail@expressjs-demo.localhost",
+  },
+]
+`;

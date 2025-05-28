@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/uiContact.processor.mjs
+scenarios:
+  - name: uiContact
+    engine: playwright
+    flowFunction: uiContactFlow

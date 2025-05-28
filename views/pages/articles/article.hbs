@@ -1,0 +1,18 @@
+{{#>PageLayout}}
+  {{#*inline "actions"}}
+    <a href="{{actions.backToArticles.href}}" role="button">{{actions.backToArticles.text}}</a>
+    <a href="{{actions.editArticle.href}}" role="button">{{actions.editArticle.text}}</a>
+    <form action="{{actions.removeArticle.href}}" method="post">
+      <button type="submit">{{actions.removeArticle.text}}</button>
+    </form>
+  {{/inline}}
+  <p>{{article.description}}</p>
+  <ul>
+    <li>{{data.dateCreated}}</li>
+    {{#if article.dateModified}}
+      <li>{{data.dateModified}}</li>
+    {{/if}}
+  </ul>
+  <img alt="" src="{{article.image}}" />
+  <div>{{article.text}}</div>
+{{/PageLayout}}

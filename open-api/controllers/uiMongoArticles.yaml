@@ -1,0 +1,112 @@
+displayArticles:
+  operationId: uiMongoArticles.displayArticles
+  summary: Displays articles
+  tags:
+    - ui
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+displayAddArticle:
+  operationId: uiMongoArticles.displayAddArticle
+  summary: Displays add an article
+  tags:
+    - ui
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+addArticle:
+  operationId: uiMongoArticles.addArticle
+  summary: Adds an article
+  tags:
+    - ui
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: ../schemas/AddArticleDto.yaml
+  responses:
+    303:
+      $ref: ../responses/303.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+displayArticle:
+  operationId: uiMongoArticles.displayArticle
+  summary: Displays an article
+  tags:
+    - ui
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    404:
+      $ref: ../responses/404.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+displayEditArticle:
+  operationId: uiMongoArticles.displayEditArticle
+  summary: Displays edit an article
+  tags:
+    - ui
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  responses:
+    200:
+      $ref: ../responses/200.html.yaml
+    404:
+      $ref: ../responses/404.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+editArticle:
+  operationId: uiMongoArticles.editArticle
+  summary: Edits an article
+  tags:
+    - ui
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: ../schemas/EditArticleDto.yaml
+  responses:
+    303:
+      $ref: ../responses/303.html.yaml
+    404:
+      $ref: ../responses/404.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml
+removeArticle:
+  operationId: uiMongoArticles.removeArticle
+  summary: Removes an article
+  tags:
+    - ui
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  responses:
+    303:
+      $ref: ../responses/303.html.yaml
+    404:
+      $ref: ../responses/404.html.yaml
+    500:
+      $ref: ../responses/500.html.yaml

@@ -1,0 +1,22 @@
+type: object
+additionalProperties: false
+properties:
+  email:
+    type: string
+    format: email
+  name:
+    type: string
+    maxLength: 100
+    minLength: 1
+  subject:
+    type: string
+    maxLength: 100
+    minLength: 1
+  text:
+    type: string
+    minLength: 1
+required:
+  - email
+  - name
+  - subject
+  - text

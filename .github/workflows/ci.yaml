@@ -1,0 +1,26 @@
+name: CI
+on: [push]
+jobs:
+  package:
+    name: Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+          node-version: lts/*
+      - name: Setup
+        run: cp ./.env.example ./.env && npm ci
+      - name: Lint
+        run: npx biome check && npx tsc
+      - name: Test
+        run: npx jest --setupFiles=dotenv/config
+      - name: Build
+        run: /bin/sh ./build.sh
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: ./dist

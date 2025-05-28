@@ -1,0 +1,16 @@
+type: object
+additionalProperties: false
+properties:
+  email:
+    $ref: ./ContactRequest.yaml#/properties/email
+  name:
+    $ref: ./ContactRequest.yaml#/properties/name
+  subject:
+    $ref: ./ContactRequest.yaml#/properties/subject
+  text:
+    $ref: ./ContactRequest.yaml#/properties/text
+required:
+  - email
+  - name
+  - subject
+  - text

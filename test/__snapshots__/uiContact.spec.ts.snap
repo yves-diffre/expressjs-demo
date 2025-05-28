@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display contact 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <meta name="description" content="Send a contact request here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/contact">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Send a contact request here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/contact">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact" aria-current="page">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Contact</h1>
+          <div role="group">
+          </div>
+        </header>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="Your email" required="" type="email" value="">
+              <label for="name">Name</label>
+              <input id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text" value="">
+              <label for="subject">Subject</label>
+              <input id="subject" maxlength="100" name="subject" placeholder="Your subject" required="" type="text" value="">
+              <label for="text">Text</label>
+              <textarea id="text" name="text" placeholder="Your text" required=""></textarea>
+            </fieldset>
+            <div role="group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not send a contact request when an unexpected error occurred 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <meta name="description" content="Send a contact request here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/contact">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Send a contact request here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/contact">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact" aria-current="page">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Contact</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Sorry, an unexpected error occurred. Please try again later.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="Your email" required="" type="email" value="email@example.org">
+              <label for="name">Name</label>
+              <input id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text" value="name">
+              <label for="subject">Subject</label>
+              <input id="subject" maxlength="100" name="subject" placeholder="Your subject" required="" type="text" value="subject">
+              <label for="text">Text</label>
+              <textarea id="text" name="text" placeholder="Your text" required="">text</textarea>
+            </fieldset>
+            <div role="group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not send a contact request when data are missing 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <meta name="description" content="Send a contact request here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/contact">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Send a contact request here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/contact">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact" aria-current="page">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Contact</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and submit your contact request again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="name-error" href="#name">Please provide a name with 100 characters maximum.</a>
+                  </li>
+                  <li>
+                    <a id="subject-error" href="#subject">Please provide a subject with 100 characters maximum.</a>
+                  </li>
+                  <li>
+                    <a id="text-error" href="#text">Please provide a text.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="name">Name</label>
+              <input id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text" value="" aria-describedby="name-error">
+              <label for="subject">Subject</label>
+              <input id="subject" maxlength="100" name="subject" placeholder="Your subject" required="" type="text" value="" aria-describedby="subject-error">
+              <label for="text">Text</label>
+              <textarea id="text" name="text" placeholder="Your text" required="" aria-describedby="text-error"></textarea>
+            </fieldset>
+            <div role="group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should not send a contact request when validation failed 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <meta name="description" content="Send a contact request here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/contact">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Send a contact request here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/contact">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact" aria-current="page">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Contact</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Please correct the following errors and submit your contact request again.
+              <ul>
+                  <li>
+                    <a id="email-error" href="#email">Please provide a valid email.</a>
+                  </li>
+                  <li>
+                    <a id="name-error" href="#name">Please provide a name with 100 characters maximum.</a>
+                  </li>
+                  <li>
+                    <a id="subject-error" href="#subject">Please provide a subject with 100 characters maximum.</a>
+                  </li>
+                  <li>
+                    <a id="text-error" href="#text">Please provide a text.</a>
+                  </li>
+              </ul>
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="Your email" required="" type="email" value="" aria-describedby="email-error">
+              <label for="name">Name</label>
+              <input id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text" value="" aria-describedby="name-error">
+              <label for="subject">Subject</label>
+              <input id="subject" maxlength="100" name="subject" placeholder="Your subject" required="" type="text" value="" aria-describedby="subject-error">
+              <label for="text">Text</label>
+              <textarea id="text" name="text" placeholder="Your text" required="" aria-describedby="text-error"></textarea>
+            </fieldset>
+            <div role="group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should send a contact request 1`] = `
+"<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <meta name="description" content="Send a contact request here.">
+    <link rel="canonical" href="https://www.expressjs-demo.localhost/contact">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Send a contact request here.">
+    <meta property="og:image" content="/icon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.expressjs-demo.localhost/contact">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#13171f">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">
+              <strong>Express.js demo</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/mongo-articles">Mongo articles</a>
+          </li>
+          <li>
+            <a href="/postgres-articles">Postgres articles</a>
+          </li>
+          <li>
+            <a href="/contact" aria-current="page">Contact</a>
+          </li>
+            <li>
+              <a href="/auth/sign-in">Sign in</a>
+              <span>/</span>
+              <a href="/auth/sign-up">Sign up</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+      <main class="PageLayout">
+        <header>
+          <h1>Contact</h1>
+          <div role="group">
+          </div>
+        </header>
+          <div role="alert">
+            Your contact request is sent.
+          </div>
+          <form method="post">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="Your email" required="" type="email" value="">
+              <label for="name">Name</label>
+              <input id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text" value="">
+              <label for="subject">Subject</label>
+              <input id="subject" maxlength="100" name="subject" placeholder="Your subject" required="" type="text" value="">
+              <label for="text">Text</label>
+              <textarea id="text" name="text" placeholder="Your text" required=""></textarea>
+            </fieldset>
+            <div role="group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+      </main>
+  
+</body></html>"
+`;
+
+exports[`should send a contact request 2`] = `
+[
+  {
+    "from": "name <email@example.org>",
+    "subject": "Contact request - subject",
+    "text": "text",
+    "to": "mail@expressjs-demo.localhost",
+  },
+]
+`;

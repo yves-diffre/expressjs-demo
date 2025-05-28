@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="{{page.lang}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{meta.title}}</title>
+    <meta name="description" content="{{meta.description}}" />
+    <link rel="canonical" href="{{page.url}}" />
+    <meta property="og:title" content="{{meta.title}}" />
+    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:image" content="/icon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{page.url}}" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#13171f" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="{{view.logo.href}}">
+              <strong>{{view.logo.text}}</strong>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              href="{{view.nav.home.href}}"
+              {{#if page.current.home}}
+                aria-current="page"
+              {{/if}}
+            >{{view.nav.home.text}}</a>
+          </li>
+          <li>
+            <a
+              href="{{view.nav.mongoArticles.href}}"
+              {{#if page.current.mongoArticles}}
+                aria-current="page"
+              {{/if}}
+            >{{view.nav.mongoArticles.text}}</a>
+          </li>
+          <li>
+            <a
+              href="{{view.nav.postgresArticles.href}}"
+              {{#if page.current.postgresArticles}}
+                aria-current="page"
+              {{/if}}
+            >{{view.nav.postgresArticles.text}}</a>
+          </li>
+          <li>
+            <a
+              href="{{view.nav.contact.href}}"
+              {{#if page.current.contact}}
+                aria-current="page"
+              {{/if}}
+            >{{view.nav.contact.text}}</a>
+          </li>
+          {{#if user}}
+            <li>
+              <form action="{{view.nav.signOut.href}}" method="post">
+                <button type="submit">{{view.nav.signOut.text}}</button>
+              </form>
+            </li>
+          {{else}}
+            <li>
+              <a
+                href="{{view.nav.signIn.href}}"
+                {{#if page.current.signIn}}
+                  aria-current="page"
+                {{/if}}
+              >{{view.nav.signIn.text}}</a>
+              <span>/</span>
+              <a
+                href="{{view.nav.signUp.href}}"
+                {{#if page.current.signUp}}
+                  aria-current="page"
+                {{/if}}
+              >{{view.nav.signUp.text}}</a>
+            </li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+    {{>@partial-block}}
+  </body>
+</html>

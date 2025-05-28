@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should add an article 1`] = `""`;
+
+exports[`should add an article 2`] = `
+[
+  "expressjs-demo",
+  "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+  "/tmp/express-busboy/00000000-0000-0000-0000-000000000000/00000000000000000000000000000000/00000000000000000000000000000000",
+  {
+    "Content-Type": "image/jpeg",
+  },
+]
+`;
+
+exports[`should edit an article 1`] = `{}`;
+
+exports[`should edit an article 2`] = `
+[
+  "expressjs-demo",
+  "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+  "/tmp/express-busboy/00000000-0000-0000-0000-000000000000/00000000000000000000000000000000/00000000000000000000000000000000",
+  {
+    "Content-Type": "image/jpeg",
+  },
+]
+`;
+
+exports[`should edit an article 3`] = `
+[
+  "expressjs-demo",
+  "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+]
+`;
+
+exports[`should edit an article when image is missing 1`] = `{}`;
+
+exports[`should edit an article when image is not a jpeg file 1`] = `{}`;
+
+exports[`should get an article 1`] = `
+{
+  "_id": "00000000-0000-0000-0000-000000000000",
+  "dateCreated": "1970-01-01T00:00:00.000Z",
+  "description": "description",
+  "image": "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+  "name": "name",
+  "text": "text",
+}
+`;
+
+exports[`should get articles 1`] = `
+[
+  {
+    "_id": "00000000-0000-0000-0000-000000000000",
+    "dateCreated": "1970-01-01T00:00:00.000Z",
+    "description": "description",
+    "image": "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+    "name": "name",
+    "text": "text",
+  },
+]
+`;
+
+exports[`should not add an article when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not add an article when data are missing 1`] = `
+{
+  "errors": {
+    "description": "Please provide a description with 250 characters maximum.",
+    "image": "Please provide an image in jpeg format.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not add an article when image is missing 1`] = `
+{
+  "errors": {
+    "image": "Please provide an image in jpeg format.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not add an article when image is not a jpeg file 1`] = `
+{
+  "errors": {
+    "image": "Please provide an image in jpeg format.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not add an article when validation failed 1`] = `
+{
+  "errors": {
+    "description": "Please provide a description with 250 characters maximum.",
+    "image": "Please provide an image in jpeg format.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not edit an article when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not edit an article when data are missing 1`] = `
+{
+  "errors": {
+    "description": "Please provide a description with 250 characters maximum.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not edit an article when id is invalid 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not edit an article when id is not found 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not edit an article when validation failed 1`] = `
+{
+  "errors": {
+    "description": "Please provide a description with 250 characters maximum.",
+    "name": "Please provide a name with 100 characters maximum.",
+    "text": "Please provide a text.",
+  },
+  "message": "Bad Request",
+  "status": "fail",
+  "statusCode": 400,
+}
+`;
+
+exports[`should not get an article when id is invalid 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not get an article when id is not found 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not remove an article when an unexpected error occurred 1`] = `
+{
+  "message": "Internal Server Error",
+  "status": "error",
+  "statusCode": 500,
+}
+`;
+
+exports[`should not remove an article when id is invalid 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should not remove an article when id is not found 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;
+
+exports[`should remove an article 1`] = `{}`;
+
+exports[`should remove an article 2`] = `
+[
+  "expressjs-demo",
+  "/uploads/articles/00000000-0000-0000-0000-000000000000-image.jpg",
+]
+`;

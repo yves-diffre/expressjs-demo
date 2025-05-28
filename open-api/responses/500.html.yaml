@@ -1,0 +1,5 @@
+description: Internal Server Error
+content:
+  text/html:
+    schema:
+      type: string

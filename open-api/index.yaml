@@ -1,0 +1,107 @@
+openapi: 3.1.0
+info:
+  title: Express.js demo
+servers:
+  - url: https://www.expressjs-demo.localhost
+security: []
+tags:
+  - name: api
+    description: Describes api
+  - name: ui
+    description: Describes ui
+paths:
+  /api/auth/sign-up:
+    post:
+      $ref: ./controllers/apiAuth.yaml#/signUp
+  /api/auth/sign-in:
+    post:
+      $ref: ./controllers/apiAuth.yaml#/signIn
+  /api/auth/sign-out:
+    post:
+      $ref: ./controllers/apiAuth.yaml#/signOut
+  /api/contact:
+    post:
+      $ref: ./controllers/apiContact.yaml#/sendContactRequest
+  /api/mongo-articles:
+    get:
+      $ref: ./controllers/apiMongoArticles.yaml#/getArticles
+    post:
+      $ref: ./controllers/apiMongoArticles.yaml#/addArticle
+  /api/mongo-articles/{_id}:
+    get:
+      $ref: ./controllers/apiMongoArticles.yaml#/getArticle
+    put:
+      $ref: ./controllers/apiMongoArticles.yaml#/editArticle
+    delete:
+      $ref: ./controllers/apiMongoArticles.yaml#/removeArticle
+  /api/postgres-articles:
+    get:
+      $ref: ./controllers/apiPostgresArticles.yaml#/getArticles
+    post:
+      $ref: ./controllers/apiPostgresArticles.yaml#/addArticle
+  /api/postgres-articles/{_id}:
+    get:
+      $ref: ./controllers/apiPostgresArticles.yaml#/getArticle
+    put:
+      $ref: ./controllers/apiPostgresArticles.yaml#/editArticle
+    delete:
+      $ref: ./controllers/apiPostgresArticles.yaml#/removeArticle
+  /:
+    get:
+      $ref: ./controllers/uiHome.yaml#/displayHome
+  /auth/sign-up:
+    get:
+      $ref: ./controllers/uiAuth.yaml#/displaySignUp
+    post:
+      $ref: ./controllers/uiAuth.yaml#/signUp
+  /auth/sign-in:
+    get:
+      $ref: ./controllers/uiAuth.yaml#/displaySignIn
+    post:
+      $ref: ./controllers/uiAuth.yaml#/signIn
+  /auth/sign-out:
+    post:
+      $ref: ./controllers/uiAuth.yaml#/signOut
+  /contact:
+    get:
+      $ref: ./controllers/uiContact.yaml#/displayContact
+    post:
+      $ref: ./controllers/uiContact.yaml#/sendContactRequest
+  /mongo-articles:
+    get:
+      $ref: ./controllers/uiMongoArticles.yaml#/displayArticles
+  /mongo-articles/add-article:
+    get:
+      $ref: ./controllers/uiMongoArticles.yaml#/displayAddArticle
+    post:
+      $ref: ./controllers/uiMongoArticles.yaml#/addArticle
+  /mongo-articles/{_id}:
+    get:
+      $ref: ./controllers/uiMongoArticles.yaml#/displayArticle
+  /mongo-articles/{_id}/edit-article:
+    get:
+      $ref: ./controllers/uiMongoArticles.yaml#/displayEditArticle
+    post:
+      $ref: ./controllers/uiMongoArticles.yaml#/editArticle
+  /mongo-articles/{_id}/remove-article:
+    post:
+      $ref: ./controllers/uiMongoArticles.yaml#/removeArticle
+  /postgres-articles:
+    get:
+      $ref: ./controllers/uiPostgresArticles.yaml#/displayArticles
+  /postgres-articles/add-article:
+    get:
+      $ref: ./controllers/uiPostgresArticles.yaml#/displayAddArticle
+    post:
+      $ref: ./controllers/uiPostgresArticles.yaml#/addArticle
+  /postgres-articles/{_id}:
+    get:
+      $ref: ./controllers/uiPostgresArticles.yaml#/displayArticle
+  /postgres-articles/{_id}/edit-article:
+    get:
+      $ref: ./controllers/uiPostgresArticles.yaml#/displayEditArticle
+    post:
+      $ref: ./controllers/uiPostgresArticles.yaml#/editArticle
+  /postgres-articles/{_id}/remove-article:
+    post:
+      $ref: ./controllers/uiPostgresArticles.yaml#/removeArticle

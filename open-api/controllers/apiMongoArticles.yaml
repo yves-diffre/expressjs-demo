@@ -1,0 +1,98 @@
+getArticles:
+  operationId: apiMongoArticles.getArticles
+  summary: Gets articles
+  tags:
+    - api
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../schemas/Article.yaml
+    500:
+      $ref: ../responses/500.json.yaml
+addArticle:
+  operationId: apiMongoArticles.addArticle
+  summary: Adds an article
+  tags:
+    - api
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: ../schemas/AddArticleDto.yaml
+  responses:
+    201:
+      $ref: ../responses/201.json.yaml
+    400:
+      $ref: ../responses/400.json.yaml
+    500:
+      $ref: ../responses/500.json.yaml
+getArticle:
+  operationId: apiMongoArticles.getArticle
+  summary: Gets an article
+  tags:
+    - api
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/Article.yaml
+    404:
+      $ref: ../responses/404.json.yaml
+    500:
+      $ref: ../responses/500.json.yaml
+editArticle:
+  operationId: apiMongoArticles.editArticle
+  summary: Edits an article
+  tags:
+    - api
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          $ref: ../schemas/EditArticleDto.yaml
+  responses:
+    204:
+      $ref: ../responses/204.json.yaml
+    400:
+      $ref: ../responses/400.json.yaml
+    404:
+      $ref: ../responses/404.json.yaml
+    500:
+      $ref: ../responses/500.json.yaml
+removeArticle:
+  operationId: apiMongoArticles.removeArticle
+  summary: Removes an article
+  tags:
+    - api
+  parameters:
+    - name: _id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/Article.yaml#/properties/_id
+  responses:
+    204:
+      $ref: ../responses/204.json.yaml
+    404:
+      $ref: ../responses/404.json.yaml
+    500:
+      $ref: ../responses/500.json.yaml

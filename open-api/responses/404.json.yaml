@@ -1,0 +1,16 @@
+description: Not Found
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          const: Not Found
+        status:
+          const: fail
+        statusCode:
+          const: 404
+      required:
+        - message
+        - status
+        - statusCode

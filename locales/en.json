@@ -1,0 +1,348 @@
+{
+  "controllers": {
+    "articles": {
+      "addArticle": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "Your article is added. You can see it <a href=\"../{{result._id}}\">here</a>.",
+        "message_400": "Please correct the following errors and submit your article again."
+      },
+      "editArticle": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "Your article is edited. You can see it <a href=\"../{{result._id}}\">here</a>.",
+        "message_400": "Please correct the following errors and submit your article again.",
+        "message_404": "Your article seems to not exist."
+      },
+      "removeArticle": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "Your article is removed.",
+        "message_404": "Your article seems to not exist."
+      }
+    },
+    "auth": {
+      "signIn": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "You are signed in.",
+        "message_400": "Please correct the following errors and sign in again.",
+        "message_404": "Please correct your email or your password."
+      },
+      "signOut": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "You are signed out."
+      },
+      "signUp": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "You are signed up.",
+        "message_400": "Please correct the following errors and sign up again.",
+        "message_409": "You are already signed up."
+      }
+    },
+    "contact": {
+      "sendContactRequest": {
+        "message": "Sorry, an unexpected error occurred. Please try again later.",
+        "message_200": "Your contact request is sent.",
+        "message_400": "Please correct the following errors and submit your contact request again."
+      }
+    }
+  },
+  "pages": {
+    "articles": {
+      "addArticle": {
+        "actions": {
+          "backToArticles": {
+            "href": "{{baseUrl}}",
+            "text": "Back to articles"
+          }
+        },
+        "form": "$t(pages.articles.shared.form, { 'returnObjects': true })",
+        "meta": {
+          "description": "Add an article here.",
+          "title": "Add an article"
+        },
+        "title": "Add an article"
+      },
+      "article": {
+        "actions": {
+          "backToArticles": {
+            "href": "{{baseUrl}}",
+            "text": "Back to articles"
+          },
+          "editArticle": {
+            "href": "{{baseUrl}}/{{article._id}}/edit-article",
+            "text": "Edit"
+          },
+          "removeArticle": {
+            "href": "{{baseUrl}}/{{article._id}}/remove-article",
+            "text": "Remove"
+          }
+        },
+        "data": {
+          "dateCreated": "Created on {{article.dateCreated, datetime}}",
+          "dateModified": "Modified on {{article.dateModified, datetime}}"
+        },
+        "meta": {
+          "description": "See your article “{{article.name}}” here.",
+          "title": "Your article “{{article.name}}”"
+        },
+        "title": "Your article “{{article.name}}”"
+      },
+      "editArticle": {
+        "actions": {
+          "backToArticles": {
+            "href": "{{baseUrl}}",
+            "text": "Back to articles"
+          },
+          "getArticle": {
+            "href": "{{baseUrl}}/{{article._id}}",
+            "text": "See"
+          },
+          "removeArticle": {
+            "href": "{{baseUrl}}/{{article._id}}/remove-article",
+            "text": "Remove"
+          }
+        },
+        "form": "$t(pages.articles.shared.form, { 'returnObjects': true })",
+        "meta": {
+          "description": "Edit your article “{{article.name}}” here.",
+          "title": "Edit your article “{{article.name}}”"
+        },
+        "title": "Edit your article “{{article.name}}”"
+      },
+      "index": {
+        "actions": {
+          "addArticle": {
+            "href": "{{baseUrl}}/add-article",
+            "text": "Add"
+          }
+        },
+        "meta": {
+          "description": "See your articles here.",
+          "title": "Your articles"
+        },
+        "title": "Your articles"
+      },
+      "shared": {
+        "form": {
+          "actions": {
+            "addArticle": "Add",
+            "editArticle": "Edit"
+          },
+          "fields": {
+            "description": {
+              "label": "Description",
+              "placeholder": "The description of your article"
+            },
+            "image": {
+              "label": "Image",
+              "placeholder": "The image of your article"
+            },
+            "name": {
+              "label": "Name",
+              "placeholder": "The name of your article"
+            },
+            "text": {
+              "label": "Text",
+              "placeholder": "The textual content of your article"
+            }
+          }
+        },
+        "preview": {
+          "actions": {
+            "editArticle": {
+              "href": "{{baseUrl}}/{{article._id}}/edit-article",
+              "label": "Edit your article “{{article.name}}”",
+              "text": "Edit"
+            },
+            "getArticle": {
+              "href": "{{baseUrl}}/{{article._id}}",
+              "label": "See your article “{{article.name}}”",
+              "text": "See"
+            },
+            "removeArticle": {
+              "href": "{{baseUrl}}/{{article._id}}/remove-article",
+              "label": "Remove your article “{{article.name}}”",
+              "text": "Remove"
+            }
+          }
+        }
+      }
+    },
+    "auth": {
+      "shared": {
+        "form": {
+          "actions": {
+            "signIn": "Sign in",
+            "signUp": "Sign up"
+          },
+          "fields": {
+            "email": {
+              "label": "Email",
+              "placeholder": "Your email"
+            },
+            "password": {
+              "label": "Password",
+              "placeholder": "Your password"
+            }
+          }
+        }
+      },
+      "signIn": {
+        "form": "$t(pages.auth.shared.form, { 'returnObjects': true })",
+        "meta": {
+          "description": "Sign in here.",
+          "title": "Sign in"
+        },
+        "title": "Sign in"
+      },
+      "signUp": {
+        "form": "$t(pages.auth.shared.form, { 'returnObjects': true })",
+        "meta": {
+          "description": "Sign up here.",
+          "title": "Sign up"
+        },
+        "title": "Sign up"
+      }
+    },
+    "contact": {
+      "index": {
+        "form": "$t(pages.contact.shared.form, { 'returnObjects': true })",
+        "meta": {
+          "description": "Send a contact request here.",
+          "title": "Contact"
+        },
+        "title": "Contact"
+      },
+      "shared": {
+        "form": {
+          "actions": {
+            "sendContactRequest": "Send"
+          },
+          "fields": {
+            "email": {
+              "label": "Email",
+              "placeholder": "Your email"
+            },
+            "name": {
+              "label": "Name",
+              "placeholder": "Your name"
+            },
+            "subject": {
+              "label": "Subject",
+              "placeholder": "Your subject"
+            },
+            "text": {
+              "label": "Text",
+              "placeholder": "Your text"
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "index": {
+        "meta": {
+          "description": "Internal Server Error",
+          "description_400": "Bad Request",
+          "description_404": "Not Found",
+          "title": "500",
+          "title_400": "400",
+          "title_404": "404"
+        },
+        "text": "Internal Server Error",
+        "text_400": "Bad Request",
+        "text_404": "Not Found",
+        "title": "500",
+        "title_400": "400",
+        "title_404": "404"
+      }
+    },
+    "home": {
+      "index": {
+        "meta": {
+          "description": "An Express.js demo.",
+          "title": "Express.js demo"
+        },
+        "text": "An <a href=\"https://expressjs.com\">Express.js</a> demo.",
+        "title": "Express.js demo"
+      }
+    }
+  },
+  "schemas": {
+    "AddArticleDto": {
+      "errorMessage": {
+        "_": "Please provide a description with 250 characters maximum, an image in jpeg format, a name with 100 characters maximum and a text.",
+        "description": "Please provide a description with 250 characters maximum.",
+        "image": "Please provide an image in jpeg format.",
+        "name": "Please provide a name with 100 characters maximum.",
+        "text": "Please provide a text."
+      }
+    },
+    "EditArticleDto": {
+      "errorMessage": {
+        "_": "Please provide a description with 250 characters maximum, an optional image in jpeg format, a name with 100 characters maximum and a text.",
+        "description": "Please provide a description with 250 characters maximum.",
+        "image": "Please provide an image in jpeg format.",
+        "name": "Please provide a name with 100 characters maximum.",
+        "text": "Please provide a text."
+      }
+    },
+    "SendContactRequestDto": {
+      "errorMessage": {
+        "_": "Please provide a valid email, a name with 100 characters maximum, a subject with 100 characters maximum and a text.",
+        "email": "Please provide a valid email.",
+        "name": "Please provide a name with 100 characters maximum.",
+        "subject": "Please provide a subject with 100 characters maximum.",
+        "text": "Please provide a text."
+      }
+    },
+    "SignInDto": {
+      "errorMessage": {
+        "_": "Please provide a valid email and a password with 100 characters maximum.",
+        "email": "Please provide a valid email.",
+        "password": "Please provide a password with 100 characters maximum."
+      }
+    },
+    "SignUpDto": {
+      "errorMessage": {
+        "_": "Please provide a valid email and a password with 100 characters maximum.",
+        "email": "Please provide a valid email.",
+        "password": "Please provide a password with 100 characters maximum."
+      }
+    }
+  },
+  "view": {
+    "logo": {
+      "href": "/",
+      "text": "Express.js demo"
+    },
+    "nav": {
+      "contact": {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      "home": {
+        "href": "/",
+        "text": "Home"
+      },
+      "mongoArticles": {
+        "href": "/mongo-articles",
+        "text": "Mongo articles"
+      },
+      "postgresArticles": {
+        "href": "/postgres-articles",
+        "text": "Postgres articles"
+      },
+      "signIn": {
+        "href": "/auth/sign-in",
+        "text": "Sign in"
+      },
+      "signOut": {
+        "href": "/auth/sign-out",
+        "text": "Sign out"
+      },
+      "signUp": {
+        "href": "/auth/sign-up",
+        "text": "Sign up"
+      }
+    }
+  }
+}

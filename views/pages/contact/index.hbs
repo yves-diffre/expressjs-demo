@@ -1,0 +1,59 @@
+{{#>PageLayout}}
+  {{#*inline "actions"}}
+  {{/inline}}
+  <form method="post">
+    <fieldset>
+      <label for="email">{{form.fields.email.label}}</label>
+      <input
+        id="email"
+        name="email"
+        placeholder="{{form.fields.email.placeholder}}"
+        required
+        type="email"
+        value="{{dto.email}}"
+        {{#if errors.email}}
+          aria-describedby="email-error"
+        {{/if}}
+      />
+      <label for="name">{{form.fields.name.label}}</label>
+      <input
+        id="name"
+        maxlength="100"
+        name="name"
+        placeholder="{{form.fields.name.placeholder}}"
+        required
+        type="text"
+        value="{{dto.name}}"
+        {{#if errors.name}}
+          aria-describedby="name-error"
+        {{/if}}
+      />
+      <label for="subject">{{form.fields.subject.label}}</label>
+      <input
+        id="subject"
+        maxlength="100"
+        name="subject"
+        placeholder="{{form.fields.subject.placeholder}}"
+        required
+        type="text"
+        value="{{dto.subject}}"
+        {{#if errors.subject}}
+          aria-describedby="subject-error"
+        {{/if}}
+      />
+      <label for="text">{{form.fields.text.label}}</label>
+      <textarea
+        id="text"
+        name="text"
+        placeholder="{{form.fields.text.placeholder}}"
+        required
+        {{#if errors.text}}
+          aria-describedby="text-error"
+        {{/if}}
+      >{{dto.text}}</textarea>
+    </fieldset>
+    <div role="group">
+      <button type="submit">{{form.actions.sendContactRequest}}</button>
+    </div>
+  </form>
+{{/PageLayout}}

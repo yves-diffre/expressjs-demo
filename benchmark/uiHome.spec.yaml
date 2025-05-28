@@ -1,0 +1,8 @@
+config:
+  engines:
+    playwright: {}
+  processor: ./benchmark/uiHome.processor.mjs
+scenarios:
+  - name: uiHome
+    engine: playwright
+    flowFunction: uiHomeFlow

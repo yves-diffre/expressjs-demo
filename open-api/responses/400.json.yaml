@@ -1,0 +1,19 @@
+description: Bad Request
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        errors:
+          type: object
+        message:
+          const: Bad Request
+        status:
+          const: fail
+        statusCode:
+          const: 400
+      required:
+        - errors
+        - message
+        - status
+        - statusCode

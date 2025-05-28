@@ -1,0 +1,5 @@
+description: Created
+headers:
+  location:
+    schema:
+      type: string

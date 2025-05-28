@@ -1,0 +1,32 @@
+{{#>PageLayout}}
+  {{#*inline "actions"}}
+    <a href="{{actions.addArticle.href}}" role="button">{{actions.addArticle.text}}</a>
+  {{/inline}}
+  <nav>
+    {{#each previews}}
+      <article data-id="{{this.article._id}}">
+        <img alt="" loading="lazy" src="{{this.article.image}}" />
+        <h2>{{this.article.name}}</h2>
+        <p>{{this.article.description}}</p>
+        <div role="group">
+          <a
+            aria-label="{{this.actions.getArticle.label}}"
+            href="{{this.actions.getArticle.href}}"
+            role="button"
+          >{{this.actions.getArticle.text}}</a>
+          <a
+            aria-label="{{this.actions.editArticle.label}}"
+            href="{{this.actions.editArticle.href}}"
+            role="button"
+          >{{this.actions.editArticle.text}}</a>
+          <form action="{{this.actions.removeArticle.href}}" method="post">
+            <button
+              aria-label="{{this.actions.removeArticle.label}}"
+              type="submit"
+            >{{this.actions.removeArticle.text}}</button>
+          </form>
+        </div>
+      </article>
+    {{/each}}
+  </nav>
+{{/PageLayout}}

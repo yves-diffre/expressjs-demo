@@ -1,0 +1,28 @@
+config:
+  plugins:
+    apdex: {}
+    ensure: {}
+    metrics-by-endpoint: {}
+  apdex:
+    threshold: 100
+  ensure:
+    thresholds:
+      - http.response_time.p99: 100
+      - http.response_time.p95: 75
+  processor: ./benchmark/apiMongoArticles.processor.mjs
+scenarios:
+  - name: apiMongoArticles
+    flow:
+      - post:
+          url: /api/mongo-articles
+          beforeRequest: addArticle
+          afterResponse: getInsertedId
+      - get:
+          url: /api/mongo-articles
+      - get:
+          url: /api/mongo-articles/{{_id}}
+      - put:
+          url: /api/mongo-articles/{{_id}}
+          beforeRequest: editArticle
+      - delete:
+          url: /api/mongo-articles/{{_id}}

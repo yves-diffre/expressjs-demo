@@ -1,0 +1,31 @@
+@forward "pico";
+
+body {
+  @extend .container;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  > footer {
+    text-align: center;
+  }
+
+  > header {
+    background: var(--pico-background-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    > nav {
+      > ul {
+        > li {
+          > form {
+            > [type="submit"] {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

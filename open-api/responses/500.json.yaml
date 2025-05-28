@@ -1,0 +1,16 @@
+description: Internal Server Error
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          const: Internal Server Error
+        status:
+          const: error
+        statusCode:
+          const: 500
+      required:
+        - message
+        - status
+        - statusCode

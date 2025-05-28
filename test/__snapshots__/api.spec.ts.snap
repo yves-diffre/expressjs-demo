@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle error 1`] = `
+{
+  "message": "Not Found",
+  "status": "fail",
+  "statusCode": 404,
+}
+`;

@@ -1,0 +1,57 @@
+{{#>PageLayout}}
+  {{#*inline "actions"}}
+    <a href="{{actions.backToArticles.href}}" role="button">{{actions.backToArticles.text}}</a>
+  {{/inline}}
+  <form enctype="multipart/form-data" method="post">
+    <fieldset>
+      <label for="name">{{form.fields.name.label}}</label>
+      <input
+        id="name"
+        maxlength="100"
+        name="name"
+        placeholder="{{form.fields.name.placeholder}}"
+        required
+        type="text"
+        value="{{dto.name}}"
+        {{#if errors.name}}
+          aria-describedby="name-error"
+        {{/if}}
+      />
+      <label for="description">{{form.fields.description.label}}</label>
+      <textarea
+        id="description"
+        maxlength="250"
+        name="description"
+        placeholder="{{form.fields.description.placeholder}}"
+        required
+        {{#if errors.description}}
+          aria-describedby="description-error"
+        {{/if}}
+      >{{dto.description}}</textarea>
+      <label for="image">{{form.fields.image.label}}</label>
+      <input
+        accept="image/jpeg"
+        id="image"
+        name="image"
+        required
+        type="file"
+        {{#if errors.image}}
+          aria-describedby="image-error"
+        {{/if}}
+      />
+      <label for="text">{{form.fields.text.label}}</label>
+      <textarea
+        id="text"
+        name="text"
+        placeholder="{{form.fields.text.placeholder}}"
+        required
+        {{#if errors.text}}
+          aria-describedby="text-error"
+        {{/if}}
+      >{{dto.text}}</textarea>
+    </fieldset>
+    <div role="group">
+      <button type="submit">{{form.actions.addArticle}}</button>
+    </div>
+  </form>
+{{/PageLayout}}

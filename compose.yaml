@@ -1,0 +1,230 @@
+services:
+  app:
+    image: app
+    build: .
+    depends_on:
+      jaeger:
+        condition: service_healthy
+      mailpit:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      prometheus:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      whodb:
+        condition: service_healthy
+    env_file: ./.env
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--tries=1", "http://${APP_HOST}:${APP_PORT}/health-check"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${APP_PORT}:3000
+      - 9229:9229
+      - ${INSTRUMENTATION_METRICS_PORT}:9464
+    restart: always
+    volumes:
+      - ./bin:/www/bin
+      - ./locales:/www/locales
+      - ./public:/www/public
+      - ./src:/www/src
+      - ./views:/www/views
+      - ./global.d.ts:/www/global.d.ts
+      - ./tsconfig.json:/www/tsconfig.json
+      - ./watch.ts:/www/watch.ts
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+      - COLLECTOR_ZIPKIN_HOST_PORT=:9411
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--tries=1", "http://localhost:16686"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - 4317:4317
+      - ${INSTRUMENTATION_TRACES_PORT}:4318
+      - 9411:9411
+      - 16686:16686
+    restart: always
+
+  mailpit:
+    image: axllent/mailpit:latest
+    environment:
+      - MP_SMTP_AUTH=${MAILER_ROOT_USER}:${MAILER_ROOT_PASSWORD} ${MAILER_APP_USER}:${MAILER_APP_PASSWORD}
+      - MP_SMTP_AUTH_ALLOW_INSECURE=true
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--tries=1", "http://localhost:8025"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${MAILER_PORT}:1025
+      - 8025:8025
+    restart: always
+
+  minio:
+    image: minio/minio:latest
+    command: ["server", "--console-address=:9001", "/data"]
+    environment:
+      - MINIO_BROWSER_REDIRECT=false
+      - MINIO_ROOT_USER=${STORAGE_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${STORAGE_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${STORAGE_PORT}:9000
+      - 9001:9001
+    restart: always
+    volumes:
+      - ./services/minio/data:/data
+  minio-client:
+    image: minio/mc:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c", "/docker-entrypoint-initdb.d/init.sh"]
+    env_file: ./.env
+    restart: no
+    volumes:
+      - ./services/minio/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  mongo:
+    image: mongo:latest
+    env_file: ./.env
+    environment:
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand({ping:1})"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${MONGO_PORT}:27017
+    restart: always
+    volumes:
+      - ./services/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  nginx:
+    image: nginx:latest
+    depends_on:
+      app:
+        condition: service_healthy
+    env_file: ./.env
+    healthcheck:
+      test: ["CMD", "service", "nginx", "status"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    volumes:
+      - ./services/nginx/etc/certs:/etc/nginx/certs
+      - ./services/nginx/etc/h5bp:/etc/nginx/h5bp
+      - ./services/nginx/etc/templates:/etc/nginx/templates
+      - ./services/nginx/etc/mime.types:/etc/nginx/mime.types
+      - ./services/nginx/etc/nginx.conf:/etc/nginx/nginx.conf
+
+  postgres:
+    image: postgres:latest
+    env_file: ./.env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      POSTGRES_USER: ${POSTGRES_ROOT_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_ROOT_PASSWORD}
+    healthcheck:
+      test:
+        ["CMD", "pg_isready", "--dbname=${POSTGRES_DATABASE}", "--username=${POSTGRES_ROOT_USER}"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${POSTGRES_PORT}:5432
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - ./services/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  prometheus:
+    image: prom/prometheus:latest
+    entrypoint:
+      [
+        "/bin/sh",
+        "-c",
+        "/docker-entrypoint-initdb.d/init.sh && /bin/prometheus --config.file=/etc/prometheus/prometheus.yml --web.enable-otlp-receiver",
+      ]
+    env_file: ./.env
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--tries=1", "http://localhost:9090"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - 9090:9090
+    restart: always
+    volumes:
+      - ./services/prometheus/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./services/prometheus/etc/prometheus.yml.template:/etc/prometheus/prometheus.yml.template
+
+  redis:
+    image: redis:latest
+    command:
+      [
+        "/bin/sh",
+        "-c",
+        "/docker-entrypoint-initdb.d/init.sh && redis-server /etc/redis/redis.conf",
+      ]
+    env_file: ./.env
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_ROOT_PASSWORD}", "ping"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - ${REDIS_PORT}:6379
+    restart: always
+    volumes:
+      - ./services/redis/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./services/redis/etc/redis.conf:/etc/redis/redis.conf
+      - ./services/redis/etc/users.acl.template:/etc/redis/users.acl.template
+
+  whodb:
+    image: clidey/whodb:latest
+    environment:
+      WHODB_MONGODB: '[{"host":"${MONGO_HOST}","port":"${MONGO_PORT}","user":"${MONGO_ROOT_USER}","password":"${MONGO_ROOT_PASSWORD}"}]'
+      WHODB_POSTGRES: '[{"database":"${POSTGRES_DATABASE}","host":"${POSTGRES_HOST}","port":"${POSTGRES_PORT}","user":"${POSTGRES_ROOT_USER}","password":"${POSTGRES_ROOT_PASSWORD}"}]'
+      WHODB_REDIS: '[{"host":"${REDIS_HOST}","port":"${REDIS_PORT}","password":"${REDIS_ROOT_PASSWORD}"}]'
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--tries=1", "http://localhost:8080"]
+      interval: 10s
+      retries: 3
+      start_period: 10s
+      timeout: 5s
+    ports:
+      - 8080:8080
+    restart: always
